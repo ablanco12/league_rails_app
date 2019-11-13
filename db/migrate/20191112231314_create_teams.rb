@@ -5,6 +5,7 @@ class CreateTeams < ActiveRecord::Migration[6.0]
       t.string :region
       t.integer :season_wins
       t.integer :season_losses
+      
       t.timestamps
     end
   end
