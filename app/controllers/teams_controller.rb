@@ -1,8 +1,8 @@
 class TeamsController < ApplicationController
-    before_action :find_team only: [:show, :edit, :update, :destroy]
+    before_action :find_team, only:[:show, :edit, :update, :destroy]
 
     def index 
-        @team = Team.all 
+        @teams = Team.all 
     end 
 
     def show
@@ -34,7 +34,7 @@ class TeamsController < ApplicationController
     private 
 
     def team_params 
-        params.require(:team).require(:team_name, :region, :season_wins, :season_wins)
+        params.require(:team).require(:team_name, :region, :season_wins, :season_losses)
     end 
 
     def find_params

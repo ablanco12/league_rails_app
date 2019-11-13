@@ -1,0 +1,17 @@
+<%= form_for (@team) do |f|%>
+
+    <%= f.label :team_name %>
+    <%= f.text_field :team_name %>
+    
+    <%= f.label :region %>
+    <%= f.text_field :region %>
+    
+    <%= f.label :season_wins %>
+    <%= f.number_field :season_wins%>
+    
+    <%= f.label :season_losses %>
+    <%= f.number_field :season_losses %>
+
+    <%= f.submit %>
+
+    <% end %>
