@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
 
-    before_action :find_team, only:[:show, :edit, :update, :destroy]
+    before_action :find_game, only:[:show, :edit, :update, :destroy]
 
     def index 
         @games = Game.all 
@@ -14,7 +14,7 @@ class GamesController < ApplicationController
     end 
 
     def create
-        @game = Game.create(team_params)
+        @game = Game.create(game_params)
         redirect_to @game 
     end 
 
@@ -34,8 +34,8 @@ class GamesController < ApplicationController
 
     private 
 
-    def team_params 
-        params.require(:game).require(:)
+    def game_params 
+        params.require(:game).require(:team_name, :region, :s_wins, :s_losses)
     end 
 
     def find_params
