@@ -34,7 +34,7 @@ class TeamsController < ApplicationController
     private 
 
     def team_params 
-        params.require(:team).require(:team_name, :region, :season_wins, :season_losses)
+        params.require(:team).require(:name, :region, :season_wins, :season_losses)
     end 
 
     def find_params
