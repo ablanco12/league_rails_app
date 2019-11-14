@@ -35,10 +35,10 @@ class GamesController < ApplicationController
     private 
 
     def game_params 
-        params.require(:game).require(:team_name, :region, :s_wins, :s_losses)
+        params.require(:game).permit(:date, :team_id)
     end 
 
-    def find_params
+    def find_game
         @game = Game.find(params[:id])
     end 
 end

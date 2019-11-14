@@ -13,10 +13,8 @@
 ActiveRecord::Schema.define(version: 2019_11_12_232114) do
 
   create_table "games", force: :cascade do |t|
-    t.string "team_name"
-    t.string "region"
-    t.integer "s_wins"
-    t.integer "s_losses"
+    t.string "team_id"
+    t.string "date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
