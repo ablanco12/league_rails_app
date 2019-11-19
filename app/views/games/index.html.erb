@@ -1,7 +1,8 @@
 <h1> Games: </h1>
 
 <ul>
+<ul>
     <% @games.each do |game| %>
-        <li><%= game.date %></li>
+        <li><%= link_to game.date, game_path(game) %></li>
     <% end %>
 </ul>
