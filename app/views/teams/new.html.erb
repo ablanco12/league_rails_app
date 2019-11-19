@@ -1,3 +1,9 @@
+<% if @errors && !@errors.empty? %>
+    <% @errors.each do |e| %>
+        <p><%= e %></p>
+    <% end %>
+<% end %>
+    
 <%= form_for (@team) do |f|%>
 
     <%= f.label :name %>

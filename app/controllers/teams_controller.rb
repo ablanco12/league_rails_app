@@ -13,8 +13,15 @@ class TeamsController < ApplicationController
     end 
 
     def create
-        @team = Team.create(team_params)
+        @team = Team.new(team_params)
+        
+        if @team.save
         redirect_to @team 
+            
+        else
+            @errors = @team.errors.full_messages
+            render :new
+        end
     end 
 
     def edit
