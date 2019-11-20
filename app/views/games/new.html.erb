@@ -7,15 +7,10 @@
 <h1> Game: </h1>
 <%= form_for (@game) do |f| %>
 <%= f.label :date %>
-<%= f.text_field :date %>
+<%= f.date_field :date %>
+<%= f.label :game_number %>
+<%= f.number_field :game_number %>
 
-#  <h2> Teams: </h2>
-#     <%= f.fields_for :teams do |team| %>
-#     <p>
-#         <%= team.label :name %>
-#         <%= team.text_field :name %>
-#     </p>
-#     <% end %>
 
 <%= f.submit %>
 <% end %>
