@@ -22,6 +22,7 @@ class GamesController < ApplicationController
         else 
             @errors = @game.errors.full_messages
             render :new 
+        end 
     end 
 
     def edit

@@ -4,14 +4,18 @@
     <% end %>
 <% end %>
 
-<%= form_for (@game) do |f|%>
+<h1> Game: </h1>
+<%= form_for (@game) do |f| %>
+<%= f.label :date %>
+<%= f.text_field :date %>
 
-    <%= f.label :team %>
-    <%= f.text_field :team %>
-    
-    <%= f.label :date %>
-    <%= f.text_field :date %>
-
-    <%= f.submit %>
-
+<h2> Teams: </h2>
+    <%= f.fields_for :teams do |team| %>
+    <p>
+        <%= team.label :name %>
+        <%= team.text_field :name %>
+    </p>
     <% end %>
+
+<%= f.submit %>
+<% end %>
