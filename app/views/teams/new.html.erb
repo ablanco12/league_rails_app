@@ -3,21 +3,25 @@
         <p><%= e %></p>
     <% end %>
 <% end %>
-    
-<%= form_for (@team) do |f|%>
 
+<h1> Teams </h1>
+<%= form_for (@team) do |f|%>
     <%= f.label :name %>
     <%= f.text_field :name %>
-    
     <%= f.label :region %>
     <%= f.text_field :region %>
-    
     <%= f.label :season_wins %>
     <%= f.number_field :season_wins%>
-    
     <%= f.label :season_losses %>
     <%= f.number_field :season_losses %>
 
-    <%= f.submit %>
+<h2> Game: </h2>
+<%= f.fields_for :games do |game| %>
+    <p>
+        <%= game.label :date %>
+        <%= game.date_field :date %>
+    </p>
+    <% end %>
 
+    <%= f.submit %>
     <% end %>

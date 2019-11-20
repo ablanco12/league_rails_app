@@ -10,6 +10,7 @@ class TeamsController < ApplicationController
 
     def new
         @team = Team.new 
+        1.times{@team.games.build}
     end 
 
     def create

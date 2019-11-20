@@ -9,13 +9,13 @@
 <%= f.label :date %>
 <%= f.text_field :date %>
 
-<h2> Teams: </h2>
-    <%= f.fields_for :teams do |team| %>
-    <p>
-        <%= team.label :name %>
-        <%= team.text_field :name %>
-    </p>
-    <% end %>
+# <h2> Teams: </h2>
+#     <%= f.fields_for :teams do |team| %>
+#     <p>
+#         <%= team.label :name %>
+#         <%= team.text_field :name %>
+#     </p>
+#     <% end %>
 
 <%= f.submit %>
 <% end %>
