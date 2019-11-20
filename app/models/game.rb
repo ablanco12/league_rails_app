@@ -1,5 +1,5 @@
 class Game < ApplicationRecord
-    has_many :teams
+    belongs_to :team
     validates :date, presence:true
     validates :team_id, presence:{message: "needs to be filled in!"}
 
